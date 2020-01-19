@@ -1,0 +1,19 @@
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  &__path {
+    fill: $color-darkgrey;
+    transition: fill 0.2s;
+  }
+  &:hover, &:focus {
+    outline: none;
+    .social-link {
+      &__path {
+        fill: $color-primary;
+      }
+    }
+  }
+}

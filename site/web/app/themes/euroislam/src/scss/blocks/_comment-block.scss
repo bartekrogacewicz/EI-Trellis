@@ -1,0 +1,31 @@
+$class-name: '.comment-block';
+
+#{$class-name} {
+  display: flex;
+  flex-direction: column;
+
+  @include min-md {
+    flex-direction: row;
+  }
+
+  &__image-wrapper {
+    width: 12.8rem;
+    height: 12.8rem;
+  }
+
+  &__image {
+
+  }
+
+  &__content {
+
+  }
+
+  &__footer {
+
+  }
+
+  &__author {
+
+  }
+}

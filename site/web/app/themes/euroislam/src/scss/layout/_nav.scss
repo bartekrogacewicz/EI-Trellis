@@ -1,0 +1,72 @@
+%item-hover {
+  color: black;
+  transition: color 0.2s;
+  &:hover, &:focus {
+    outline: none;
+    color: $color-primary;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 -1rem;
+  &__item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @include min-lg {
+      @at-root .site-header & {
+        &:first-of-type {
+          justify-content: flex-start;
+        }
+        &:last-of-type {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  &__link {
+    display: block;
+    padding: 1rem;
+    font-family: $font-header;
+    font-size: var(--font-size);
+    white-space: nowrap;
+    @extend %item-hover;
+  }
+}
+
+.hot {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0 -1rem;
+  &__item, .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @include min-lg {
+      margin-right: 2rem;
+    }
+    &--title {
+      color: $color-primary;
+      margin-left: -1rem;
+    }
+  }
+  .nav__link, &__item--title {
+    display: block;
+    padding: 1rem;
+    font-family: $font-content;
+    font-size: var(--font-size);
+    font-weight: $font-bold;
+    white-space: nowrap;
+    @extend %item-hover;
+  }
+}

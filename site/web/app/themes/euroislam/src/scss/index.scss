@@ -1,0 +1,45 @@
+// CORE
+@import '~ress';
+@import '~bootstrap/dist/css/bootstrap-grid.min.css';
+@import './core/_variables';
+@import './core/site';
+
+// LAYOUT
+@import './layout/header';
+@import './layout/nav';
+@import './layout/section';
+@import './layout/footer';
+@import './layout/has-scroll';
+
+// BLOCKS
+@import './blocks/article-block';
+@import './blocks/hero-block';
+@import './blocks/debate-block';
+@import './blocks/aside';
+@import './blocks/news-box';
+@import './blocks/faq';
+
+// COMPONENTS
+@import './components/button';
+@import './components/language-switcher';
+@import './components/search-bar';
+@import './components/author-card';
+@import './components/pagination';
+@import './components/form';
+
+// ELEMENTS
+@import './elements/social-link';
+@import './elements/image';
+@import './elements/video';
+@import './elements/headings';
+@import './elements/faq-tag';
+
+// SINGLE-ELEMENTS
+@import './single-elements/a';
+@import './single-elements/p';
+@import './single-elements/img';
+@import './single-elements/headings';
+
+// VIEWS
+@import './views/article';
+@import './views/contact';

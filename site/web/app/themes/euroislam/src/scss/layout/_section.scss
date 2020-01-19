@@ -1,0 +1,42 @@
+.section {
+  display: flex;
+  flex-direction: column;
+
+  &-separator {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: $white;
+    height: 1px;
+  }
+
+  &-title {
+    display: block;
+    font-size: 3rem;
+    font-weight: $font-bold;
+    color: $color-primary;
+    margin: 3rem 0 6rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      height: 1px;
+    }
+
+    &::before {
+      width: 100%;
+      background-color: $color-lightgrey;
+      z-index: 0;
+    }
+
+    &::after {
+      width: 7rem;
+      background-color: $black;
+      z-index: 1;
+    }
+  }
+}

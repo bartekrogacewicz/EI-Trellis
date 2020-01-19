@@ -1,0 +1,57 @@
+.wpcf7-form {
+  padding: 3rem;
+  background-color: $color-lightgrey;
+  display: flex;
+  flex-wrap: wrap;
+
+  input:not([type="submit"]), textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-family: $font-content;
+    font-size: inherit;
+    font-weight: $font-regular;
+  }
+
+  input:not([type="submit"]) {
+    height: 5rem;
+  }
+
+  textarea {
+    height: 20rem;
+  }
+
+  &>div {
+    width: 100%;
+  }
+
+  &>p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include min-lg {
+      padding: 0 1.5rem;
+      width: 50%;
+
+      &:nth-last-of-type(2),
+      &:last-of-type {
+        width: 100%;
+      }
+    }
+
+    label {
+      font-weight: $font-bold;
+    }
+
+    [type="submit"] {
+      @extend %button-input;
+      width: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.wpcf7-form-control-wrap {
+  border-bottom: 1px solid $black;
+}

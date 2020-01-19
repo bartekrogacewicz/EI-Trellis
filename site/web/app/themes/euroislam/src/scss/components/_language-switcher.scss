@@ -1,0 +1,28 @@
+.lang-item {
+  line-height: 1.2;
+  &:not(:last-child) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 50%;
+      background-color: $white;
+      transform: translateY(-50%);
+    }
+  }
+  &>a {
+    display: block;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    font-family: $font-header;
+    color: $white;
+    background-color: rgba($white, 0);
+    transition: background-color 0.2s 0s;
+    &:hover, &:focus {
+      background-color: rgba($white, 0.4);
+    }
+  }
+}

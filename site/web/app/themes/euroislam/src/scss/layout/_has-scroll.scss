@@ -1,0 +1,67 @@
+@mixin has-scroll($class-name) {
+  .has-scroll {
+    overflow: auto;
+    max-width: calc(#{$lg - 1}px - 3rem);
+    flex-wrap: nowrap;
+
+    @include min-lg {
+      max-width: unset;
+    }
+
+    &:not(.has-scroll-mobile) {
+      #{$class-name} {
+        min-width: 32rem;
+      }
+    }
+
+    &-mobile {
+      flex-wrap: nowrap;
+
+      #{$class-name} {
+        // max-width: 32rem;
+      }
+
+      @include min-md {
+        flex-wrap: wrap;
+
+        #{$class-name} {
+          // max-width: 100%;
+        }
+      }
+    }
+  }
+
+  #{$class-name} {
+    @at-root .has-scroll & {
+      min-width: 32rem;
+
+      @include min-lg {
+        min-width: unset;
+      }
+    }
+
+    @at-root .has-scroll-mobile & {
+      @include min-md {
+        min-width: unset;
+      }
+    }
+
+    @for $i from 2 through 4 {
+      @at-root .has-#{$i} & {
+        @include min-lg {
+          max-width: calc(100% / #{$i});
+        }
+
+        @at-root .has-scroll-mobile .has-#{$i} & {
+          @include min-lg {
+            max-width: none;
+          }
+
+          @include min-xl {
+            max-width: calc(100% / #{$i});
+          }
+        }
+      }
+    }
+  }
+}

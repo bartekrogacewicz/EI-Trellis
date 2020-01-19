@@ -1,0 +1,36 @@
+html {
+  font-size: 10px;
+}
+
+// DYNAMIC VARIABLES
+:root {
+  // FONTS
+  --font-size: 1.5rem;
+  --line-height: 1.5;
+
+  @include min-sm {
+    --font-size: 1.55rem;
+    --line-height: 1.55;
+  }
+
+  @include min-md {
+    --font-size: 1.6rem;
+    --line-height: 1.6;
+  }
+
+  @include min-lg {
+    --font-size: 1.7rem;
+    --line-height: 1.7;
+  }
+
+  @include min-xl {
+    --font-size: 1.8rem;
+    --line-height: 1.8;
+  }
+}
+
+body {
+  &.admin-bar {
+    padding-top: 32px;
+  }
+}

@@ -1,0 +1,54 @@
+// BREAKPOINTS
+$sm: 560;
+$md: 768;
+$lg: 992;
+$xl: 1200;
+
+// MIXINS
+@mixin min-sm {
+  @media only screen and (min-width: #{$sm}px) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media only screen and (min-width: #{$md}px) {
+    @content;
+  }
+}
+
+@mixin min-lg {
+  @media only screen and (min-width: #{$lg}px) {
+    @content;
+  }
+}
+
+@mixin min-xl {
+  @media only screen and (min-width: #{$xl}px) {
+    @content;
+  }
+}
+
+// IMPORT CSS CUSTOM PROPERTIES FOR DYNAMIC VARIABLES
+@import './core/_custom-properties';
+
+// COLORS
+$color-primary: #1F629B;
+$color-darkgrey: #4d4d4d;
+$color-pagination-active: #1b1b3a;
+$color-pagination-inactive: #bbbbc4;
+$color-lightgrey: #fafafa;
+$black: #000;
+$white: #fff;
+
+// FONTS
+$font-content: 'Raleway', sans-serif;
+$font-header: 'Spectral', serif;
+$font-size: var(--font-size);
+$font-regular: 500;
+$font-bold: 700;
+$line-height: 1.8;
+
+// SHADOWS
+$box-shadow-primary: 0px 0px 1.6rem rgba($color-primary, 0.25);
+$box-shadow-white: 0px 0px 2.4rem rgba($white, 0.25);
