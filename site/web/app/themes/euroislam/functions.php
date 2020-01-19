@@ -3,6 +3,11 @@
 include('_polylang.php');
 include('_custom_functions.php');
 
+// function pll_register_string($str) {return $str;}
+// function get_field($str) {return $str;}
+// function pll_e($str) {return $str;}
+// function pll_current_language($str) {return $str;}
+
 // Rejestracja obslugi zarzadzania menu
 function register_menus() {
   register_nav_menus(
